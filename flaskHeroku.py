@@ -11,6 +11,11 @@ from flask.views import MethodView
 
 app= Flask(__name__)
 
+@app.route("/")
+def hello(name):
+  return render_template("home.html")
+
+
 @app.route("/<string:name>")
 def hello(name):
   return render_template("home.html", name=name)
