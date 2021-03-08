@@ -17,7 +17,7 @@ app= Flask(__name__)
 
 
 @app.route("/<string:name>")
-def hello(name):
+def hello(name = "visitor"):
   return render_template("home.html", name=name)
 
 
